@@ -1,13 +1,13 @@
 {% if request.user.is_authenticated %}
 
 <p>{{request.user}}</p>
-<a href="">Log Out</a>
+<a href="{% url 'logout' %}">Log Out</a>
 {% else %}
-<a href="">Log In</a>
+<a href="{% url 'login' %}">Log In</a>
 {% endif %}
 
 <hr>
-<h1>My to do List</h1>
+<h1>My to do List{{ color }}</h1>
 
 
 
